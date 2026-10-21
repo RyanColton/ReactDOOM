@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#111211"><title>ReactDOOM</title>  <script type="module" crossorigin src="./assets/index-TPgQ-_hn.js"></script>
+  <link rel="stylesheet" crossorigin href="./assets/index-DbSgh-a-.css">
+</head>
+<body>
+<div class="shell">
+<header><h1 class="brand">ReactDOOM</h1></header>
+<main>
+<section class="display" aria-label="Game">
+<div id="screen" class="screen-host" tabindex="0" aria-label="DOOM screen, 320 by 200 pixels"></div>
+<p id="present-stats" class="present-stats" aria-live="off"></p>
+<div class="controls-bar">
+<label class="control">Map <select id="maps" disabled></select></label>
+<button id="game-start" type="button" disabled>Play</button>
+<label class="control">Renderer <select id="renderer"><option value="react-pixels-individual" selected>React · per pixel (individual updates)</option><option value="react-pixels-rows">React · per pixel (row updates)</option><option value="react-declarative">React · declarative</option><option value="react-rows">React · row gradients</option></select></label>
+</div>
+<p id="status" class="status" role="status" aria-live="polite">Downloading DOOM shareware…</p>
+<p class="hint">Click the screen to play. W/S move · A/D turn · Q/E strafe · F use · Space fire · 1–7 weapons · Tab map · Esc menu</p>
+</section>
+<section id="level-summary" class="level-summary" aria-labelledby="level-summary-title" tabindex="-1" hidden><h2 id="level-summary-title">Level complete</h2><dl><div><dt>Kills</dt><dd id="result-kills"></dd></div><div><dt>Items</dt><dd id="result-items"></dd></div><div><dt>Secrets</dt><dd id="result-secrets"></dd></div><div><dt>Time</dt><dd id="result-time"></dd></div><div><dt>Par</dt><dd id="result-par"></dd></div></dl><p id="finale-caption" hidden></p><pre id="finale-text" hidden></pre><p id="intermission-help"></p><p id="next-map"></p><button id="next-level" type="button">Continue</button></section>
+<!-- Controls the web shell wires up at startup but that this page keeps hidden: WAD loading, inspection views, camera, sound test bench, gamma and wipe. -->
+<div id="tooling" hidden>
+<span id="display-label"></span><span id="frame-state"></span><button id="fullscreen" type="button"></button>
+<input id="wad" type="file" accept=".wad,.WAD" multiple><button id="shareware" type="button"></button>
+<form id="remote-form"><input id="wad-url" type="url"><button type="submit"></button></form><button id="demo" type="button"></button>
+<select id="view"><option value="title">title</option><option value="map">map</option><option value="world" selected>world</option><option value="level">level</option><option value="texture">texture</option></select>
+<select id="textures" disabled></select>
+<p id="camera-help" hidden></p><div id="camera-buttons" hidden><button id="camera-left" type="button"></button><button id="camera-forward" type="button"></button><button id="camera-right" type="button"></button></div><button id="camera-reset" type="button" hidden></button>
+<div id="game-buttons" hidden><button id="game-mouse" type="button"></button><button id="game-menu" type="button"></button><button id="game-pause" type="button"></button><button id="game-stop" type="button"></button></div>
+<p id="game-help" hidden></p><p id="game-hud" hidden></p><p id="game-message" hidden></p>
+<button id="gamma" type="button"></button><button id="wipe" type="button"></button>
+<select id="sounds" disabled></select><input id="sound-volume" type="range" min="0" max="15" value="15"><button id="sound-play" type="button" disabled></button><button id="sound-stop" type="button" disabled></button><p id="sound-status"></p>
+<div id="music-control"><input id="music-volume" type="range" min="0" max="15" value="15"></div><p id="music-status"></p>
+</div>
+</main>
+</div>
+</body></html>
